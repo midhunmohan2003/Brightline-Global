@@ -14,6 +14,8 @@ import {
   FaBroom,
 } from "react-icons/fa";
 import Navbar from "../Components/Navbar";
+import "../Pages/services.css"; 
+
 const services = [
   {
     icon: <FaBolt />,
@@ -76,6 +78,7 @@ const services = [
     desc: "Professional cleaning services for industrial and commercial facilities.",
   },
 ];
+
 const Services = () => {
   return (
     <section
@@ -83,45 +86,36 @@ const Services = () => {
       className="py-20 bg-gradient-to-r from-[#0F172A] to-[#1E294B] text-white"
       style={{ fontFamily: '"Exo 2", sans-serif' }}
     >
-      {" "}
-      <Navbar />{" "}
+      <Navbar />
+
       <div className="container mx-auto px-6">
-        {" "}
         <h2 className="text-center text-4xl font-bold mb-12 text-teal-400">
-          {" "}
-          Our Expertise & Services{" "}
-        </h2>{" "}
+          Our Expertise & Services
+        </h2>
+
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          {" "}
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-[#0B132B]/70 border border-teal-500/30 rounded-2xl p-8 text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_0_25px_rgba(45,212,191,0.5)]"
-            >
-              {" "}
-              {/* Icon */}{" "}
-              <div className="flex justify-center items-center mb-6">
-                {" "}
-                <div className="text-teal-400 text-5xl bg-[#1E294B] p-5 rounded-full border-2 border-teal-400 transition-all duration-300 group-hover:bg-teal-500/10">
-                  {" "}
-                  {service.icon}{" "}
-                </div>{" "}
-              </div>{" "}
-              {/* Title */}{" "}
-              <h5 className="text-2xl font-semibold mb-3 text-white">
-                {" "}
-                {service.title}{" "}
-              </h5>{" "}
-              {/* Description */}{" "}
-              <p className="text-gray-300 text-sm leading-relaxed">
-                {" "}
-                {service.desc}{" "}
-              </p>{" "}
+            <div key={index} className="perspective">
+              <div className="flip-card w-full h-72">
+                {/* Front Side */}
+                <div className="flip-card-front bg-[#0B132B]/70 border border-teal-500/30 p-8 text-center flex flex-col justify-center items-center">
+                  <div className="text-teal-400 text-5xl bg-[#1E294B] p-5 rounded-full border-2 border-teal-400 mb-6">
+                    {service.icon}
+                  </div>
+                  <h5 className="text-2xl font-semibold text-white">{service.title}</h5>
+                </div>
+
+                {/* Back Side */}
+                <div className="flip-card-back bg-[#1E294B]/90 border border-teal-500/30 p-8 text-center">
+                  <p className="text-gray-300 text-sm leading-relaxed">{service.desc}</p>
+                </div>
+              </div>
             </div>
-          ))}{" "}
-        </div>{" "}
-      </div>{" "}
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
+
 export default Services;
