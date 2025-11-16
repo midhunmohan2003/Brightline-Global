@@ -57,6 +57,11 @@ function Navbar() {
               Services
             </li>{" "}
           </Link>
+           <Link to="/gallery">
+            <li className="hover:text-[#00F5A0] cursor-pointer transition">
+              Gallery
+            </li>
+          </Link>
           <Link to="/contact">
           <li className="hover:text-[#00F5A0] cursor-pointer transition">
             Contact
@@ -85,6 +90,11 @@ function Navbar() {
          <Link to="/services"> <li className="hover:text-[#00F5A0] cursor-pointer transition">
             Services
           </li></Link>
+          <Link to="/gallery">
+            <li className="hover:text-[#00F5A0] cursor-pointer transition">
+              Gallery
+            </li>
+          </Link>
           <Link to="/contact"><li className="hover:text-[#00F5A0] cursor-pointer transition">
             Contact
           </li></Link>

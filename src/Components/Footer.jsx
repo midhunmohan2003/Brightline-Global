@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -20,28 +21,28 @@ const Footer = () => {
         <div>
           <h5 className="text-xl font-semibold text-teal-400 mb-4">Quick Links</h5>
           <ul className="space-y-2">
-            <li className="hover:text-teal-400 transition cursor-pointer">Home</li>
-            <li className="hover:text-teal-400 transition cursor-pointer">Services</li>
-            <li className="hover:text-teal-400 transition cursor-pointer">About Us</li>
-            <li className="hover:text-teal-400 transition cursor-pointer">Contact</li>
+            <Link to="/"><li className="hover:text-teal-400 transition cursor-pointer">Home</li></Link>
+             <Link to="/about"><li className="hover:text-teal-400 transition cursor-pointer">About Us</li></Link>
+              <Link to="/services"> <li className="hover:text-teal-400 transition cursor-pointer">Services</li></Link>
+            <Link to="/contact"><li className="hover:text-teal-400 transition cursor-pointer">Contact</li></Link>
           </ul>
         </div>
 
         {/* Contact & Social */}
         <div>
           <h5 className="text-xl font-semibold text-teal-400 mb-4">Contact</h5>
-          <p className="mb-2">Phone: +123 456 7890</p>
-          <p className="mb-4">Email: info@example.com</p>
+          <p className="mb-2">Phone: +96878026775</p>
+          <p className="mb-4">Email: brightlinegloballlc@gmail.com</p>
           <div className="flex gap-4 mt-2">
             <a href="#" className="p-3 rounded-full bg-[#1E294B] hover:bg-teal-400 hover:text-[#0F172A] transition">
               <FaFacebookF />
             </a>
-            <a href="#" className="p-3 rounded-full bg-[#1E294B] hover:bg-teal-400 hover:text-[#0F172A] transition">
+            {/* <a href="#" className="p-3 rounded-full bg-[#1E294B] hover:bg-teal-400 hover:text-[#0F172A] transition">
               <FaTwitter />
             </a>
             <a href="#" className="p-3 rounded-full bg-[#1E294B] hover:bg-teal-400 hover:text-[#0F172A] transition">
               <FaInstagram />
-            </a>
+            </a> */}
             <a href="#" className="p-3 rounded-full bg-[#1E294B] hover:bg-teal-400 hover:text-[#0F172A] transition">
               <FaLinkedinIn />
             </a>
@@ -51,7 +52,7 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="mt-12 border-t border-teal-400/30 pt-6 text-center text-gray-500 text-sm">
-        &copy; {new Date().getFullYear()} YourCompany. All rights reserved.
+        &copy; {new Date().getFullYear()} BrightlineGlobal. All rights reserved.
       </div>
     </footer>
   );

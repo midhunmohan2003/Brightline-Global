@@ -21,7 +21,7 @@ function Landingpage() {
       </h1>
 
       <p className="text-gray-300 text-base sm:text-lg md:text-xl mt-4">
-        Electrical Meter Contract Company
+        Electrical Contract Company
       </p>
 
       {/* Social Icons */}

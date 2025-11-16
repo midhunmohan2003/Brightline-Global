@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa";
 import Navbar from "../Components/Navbar";
 import "../Pages/services.css"; 
+import Footer from "../Components/Footer";
 
 const services = [
   {
@@ -52,16 +53,7 @@ const services = [
     title: "Electrical Meter Replacement",
     desc: "Upgrade and replace old meters with high-quality, certified electrical meters.",
   },
-  {
-    icon: <FaFan />,
-    title: "Air Conditioning Service",
-    desc: "Installation, repair, and maintenance of air conditioning systems for all environments.",
-  },
-  {
-    icon: <FaHardHat />,
-    title: "Civil Works",
-    desc: "Structural and civil construction support for all types of engineering projects.",
-  },
+
   {
     icon: <FaVideo />,
     title: "CCTV Works",
@@ -72,15 +64,12 @@ const services = [
     title: "Manpower Service",
     desc: "Skilled workforce for technical, maintenance, and construction needs.",
   },
-  {
-    icon: <FaBroom />,
-    title: "Cleaning Service",
-    desc: "Professional cleaning services for industrial and commercial facilities.",
-  },
+
 ];
 
 const Services = () => {
   return (
+    <div>
     <section
       id="services"
       className="py-20 bg-gradient-to-r from-[#0F172A] to-[#1E294B] text-white"
@@ -115,6 +104,9 @@ const Services = () => {
         </div>
       </div>
     </section>
+    <Footer/>
+    </div>
+    
   );
 };
 
