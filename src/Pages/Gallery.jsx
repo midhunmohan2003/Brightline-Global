@@ -6,12 +6,12 @@ import "react-photo-view/dist/react-photo-view.css";
 
 function Gallery() {
   const images = [
-    "/src/assets/gallery1.jpg",
-    "/src/assets/gallery2.jpg",
-    "/src/assets/gallery3.jpg",
-    "/src/assets/gallery4.jpg",
-    "/src/assets/gallery5.jpg",
-    "/src/assets/gallery6.jpg",
+    "/src/assets/images/gallery1.jpg",
+    "/src/assets/images/gallery2.jpg",
+    "/src/assets/images/gallery3.jpg",
+    "/src/assets/images/gallery4.jpg",
+    "/src/assets/images/gallery5.jpg",
+    "/src/assets/images/gallery6.jpg",
   ];
 
   return (
