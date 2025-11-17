@@ -4,6 +4,10 @@ import Navbar from '../Components/Navbar';
 import { Link } from 'react-router-dom';
 import Footer from '../Components/Footer';
 import { motion, useAnimation } from "framer-motion";
+import CountUp from "react-countup";
+import { FaBolt, FaTachometerAlt, FaExchangeAlt, FaWater } from "react-icons/fa";
+import StatisticsCounter from '../Components/StatisticsCounter';
+
 
 
 function Landingpage() {
@@ -172,6 +176,23 @@ function Landingpage() {
     </div>
       </motion.div>
   </div>
+  
+  {/* Project Statistics Section */}
+<motion.div
+  className="container mt-20"
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, amount: 0.3 }}
+  transition={{ duration: 1 }}
+>
+  <h2 className="text-4xl md:text-5xl font-bold text-teal-400 text-center mb-12">
+    Our Projects
+  </h2>
+
+  <StatisticsCounter />
+</motion.div>
+
+
   
 </section>
 
