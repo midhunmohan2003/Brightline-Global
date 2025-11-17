@@ -64,6 +64,65 @@ function About() {
             </div>
           </div>
         </div>
+        {/* Leadership & Management Section */}
+<div className="mt-28">
+  <h3 className="text-4xl font-bold text-center text-teal-400 mb-14">
+    Leadership & Management
+  </h3>
+
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+    {/* Card Template */}
+    {[
+      {
+        role: "Managing Director",
+        name: "Qais Hamood Salim Al Battashi",
+        icon: "🏢",
+      },
+      {
+        role: "Managing Partner & General Manager",
+        name: "Nabeel Vahab Udheen",
+        icon: "👔",
+      },
+      {
+        role: "Electrical Engineer & Data Analyst",
+        name: "Al Haj Akthar Ismail",
+        icon: "⚡",
+      },
+      {
+        role: "Project Coordinator",
+        name: "Inthihad Hilal Ali Al Hosni",
+        icon: "📌",
+      },
+      {
+        role: "Safety Officer",
+        name: "Al Ganim Akthar Ismsil",
+        icon: "🛡️",
+      },
+    ].map((person, index) => (
+      <div
+        key={index}
+        className="relative bg-[#14213D]/80 backdrop-blur-xl border border-teal-400/40 rounded-2xl p-8 shadow-xl 
+        hover:shadow-teal-400/50 transition-all duration-300 hover:-translate-y-3 hover:bg-[#162544]/90"
+      >
+        {/* Icon */}
+        <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
+          <div className="w-20 h-20 rounded-full bg-white border-4 border-teal-400 flex items-center justify-center shadow-lg text-4xl">
+            {person.icon}
+          </div>
+        </div>
+
+        <div className="mt-14 text-center">
+          <h4 className="text-lg font-semibold text-teal-300 tracking-wide mb-2">
+            {person.role}
+          </h4>
+          <p className="text-gray-300 text-base">{person.name}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
       </section>
       <Footer />
     </div>

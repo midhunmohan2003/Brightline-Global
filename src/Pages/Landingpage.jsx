@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaFacebookF, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Navbar from '../Components/Navbar';
 import { Link } from 'react-router-dom';
 import Footer from '../Components/Footer';
@@ -26,9 +26,9 @@ function Landingpage() {
 
       {/* Social Icons */}
       <div className="flex space-x-5 mt-6">
-        <FaTwitter className="text-white hover:text-teal-400 cursor-pointer text-2xl transition-transform duration-300 hover:-translate-y-1" />
+        <FaFacebookF className="text-white hover:text-teal-400 cursor-pointer text-2xl transition-transform duration-300 hover:-translate-y-1" />
         <FaLinkedin className="text-white hover:text-teal-400 cursor-pointer text-2xl transition-transform duration-300 hover:-translate-y-1" />
-        <FaInstagram className="text-white hover:text-teal-400 cursor-pointer text-2xl transition-transform duration-300 hover:-translate-y-1" />
+        {/* <FaInstagram className="text-white hover:text-teal-400 cursor-pointer text-2xl transition-transform duration-300 hover:-translate-y-1" /> */}
       </div>
 
       {/* Buttons */}
@@ -69,6 +69,80 @@ function Landingpage() {
       <div className="absolute w-[320px] sm:w-[400px] md:w-[460px] h-[320px] sm:h-[400px] md:h-[460px] rounded-full bg-teal-400/20 blur-3xl -z-10"></div>
     </div>
   </div>
+  {/* What We Offer Section */}
+<section className="w-full bg-gradient-to-br from-[#0F172A] via-[#182444] to-[#1E294B] text-white py-24 px-6">
+  <div className="container mx-auto max-w-6xl text-center">
+
+    {/* Main Heading */}
+    <h2 className="text-4xl md:text-5xl font-bold text-teal-400 mb-4">
+      What We Offer
+    </h2>
+
+    {/* Sub Heading */}
+    <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-14 tracking-wide">
+      Why Choose Brightline Global?
+    </h3>
+
+    {/* Feature Cards Grid */}
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      {[
+        {
+          title: "Proven Expertise",
+          desc: "Demonstrated success in electrical and water utility sectors.",
+          icon: "⚡",
+        },
+        {
+          title: "Rapid Execution",
+          desc: "A young, agile company capable of adapting and delivering efficiently.",
+          icon: "🚀",
+        },
+        {
+          title: "Quality Assurance",
+          desc: "Commitment to the highest standards of safety and workmanship.",
+          icon: "✔️",
+        },
+        {
+          title: "Trusted Partner",
+          desc: "A strong performance record with leading Omani companies.",
+          icon: "🤝",
+        },
+        {
+          title: "Dedicated Team",
+          desc: "Skilled and motivated workforce ensuring every project is handled professionally.",
+          icon: "👷‍♂️",
+        },
+        {
+          title: "Strong Goodwill",
+          desc: "Reliable, transparent, and committed to long-term partnerships.",
+          icon: "🏆",
+        },
+      ].map((item, i) => (
+        <div
+          key={i}
+          className="bg-[#14213D]/90 border border-teal-400/40 rounded-2xl p-8
+          shadow-lg hover:shadow-teal-400/40 transition-all duration-300
+          hover:-translate-y-3 hover:bg-[#162544]/90 backdrop-blur-xl"
+        >
+          {/* Icon */}
+          <div className="text-5xl mb-4">{item.icon}</div>
+
+          {/* Title */}
+          <h4 className="text-xl font-semibold text-teal-300 mb-3">
+            {item.title}
+          </h4>
+
+          {/* Description */}
+          <p className="text-gray-300 leading-relaxed text-sm md:text-base">
+            {item.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
 </section>
 <Footer/>
 

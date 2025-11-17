@@ -18,11 +18,11 @@ import "../Pages/services.css";
 import Footer from "../Components/Footer";
 
 const services = [
-  {
-    icon: <FaBolt />,
-    title: "Electrical Panel Board",
-    desc: "Design, installation, and maintenance of electrical panel boards ensuring safety and efficiency.",
-  },
+  // {
+  //   icon: <FaBolt />,
+  //   title: "Electrical Panel Board",
+  //   desc: "Design, installation, and maintenance of electrical panel boards ensuring safety and efficiency.",
+  // },
   {
     icon: <FaTachometerAlt />,
     title: "Electrical Meter Connection",
@@ -54,11 +54,11 @@ const services = [
     desc: "Upgrade and replace old meters with high-quality, certified electrical meters.",
   },
 
-  {
-    icon: <FaVideo />,
-    title: "CCTV Works",
-    desc: "Design and installation of modern surveillance systems for safety and monitoring.",
-  },
+  // {
+  //   icon: <FaVideo />,
+  //   title: "CCTV Works",
+  //   desc: "Design and installation of modern surveillance systems for safety and monitoring.",
+  // },
   {
     icon: <FaPeopleCarry />,
     title: "Manpower Service",

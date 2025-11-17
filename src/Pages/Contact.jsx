@@ -139,16 +139,16 @@ const Contact = () => {
             <div className="flex flex-col gap-6">
               {/* PHONE */}
               <div
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setOpen(!open);
-                }}
-                className="relative flex items-center gap-4 bg-[#0B132B]/70 p-6 rounded-2xl hover:shadow-[0_0_25px_rgba(45,212,191,0.5)] transition-all duration-300 hover:cursor-pointer"
+             
+                className="relative flex items-center gap-4 bg-[#0B132B]/70 p-6 rounded-2xl hover:shadow-[0_0_25px_rgba(45,212,191,0.5)] transition-all duration-300"
               >
                 <FaPhone className="text-teal-400 text-3xl" />
                 <div>
                   <h5 className="text-xl font-semibold">Phone</h5>
-                  <p>+96878026775</p>
+                  <p  className="text-gray-300 hover:text-white hover:cursor-pointer" onClick={(e) => {
+                  e.stopPropagation();
+                  setOpen(!open);
+                }} >+96878026775</p>
 
                   {open && (
                     <div
@@ -199,7 +199,7 @@ const Contact = () => {
                 <FaMapMarkerAlt className="text-teal-400 text-3xl" />
                 <div>
                   <h5 className="text-xl font-semibold">Address</h5>
-                  <p className="text-gray-300">123 Main Street, City, Country</p>
+                  <p className="text-gray-300">GGC2+PRH, Al Amarat, Muscat Oman</p>
                 </div>
               </div>
             </div>
