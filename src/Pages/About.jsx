@@ -108,7 +108,7 @@ function About() {
                   { role: "Managing Partner & General Manager", name: "Nabeel Vahab Udheen", icon: "👔" },
                   { role: "Electrical Engineer & Data Analyst", name: "Al Haj Akthar Ismail", icon: "⚡" },
                   { role: "Project Coordinator", name: "Inthihad Hilal Ali Al Hosni", icon: "📌" },
-                  { role: "Safety Officer", name: "Al Ganim Akthar Ismsil", icon: "🛡️" },
+                  { role: "Safety Officer", name: "Al Ganim Akthar Ismail", icon: "🛡️" },
                 ].map((person, index) => (
                   <div
                     key={index}
