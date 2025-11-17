@@ -9,9 +9,17 @@ const Footer = () => {
 
         {/* Logo / Brand */}
         <div>
-           <span className="text-xl sm:text-2xl font-bold text-white whitespace-nowrap">
-              Brightline<span className="text-[#00F5A0]">Global</span>
-            </span>
+          <span className="whitespace-nowrap select-none text-2xl sm:text-3xl font-bold">
+  <span className="text-white drop-shadow-[0_0_6px_rgba(255,255,255,0.5)]">
+    Brightline
+  </span>
+  <span className="text-[#00F5A0] drop-shadow-[0_0_6px_rgba(0,245,160,0.5)] ml-1">
+    Global
+  </span>
+  <span className="text-gray-300 text-sm ml-1">LLC</span>
+</span>
+
+
           <p className="text-gray-400 max-w-sm">
             Providing quality electrical, plumbing, and maintenance services with professional expertise and reliability.
           </p>

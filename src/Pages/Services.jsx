@@ -16,13 +16,10 @@ import {
 import Navbar from "../Components/Navbar";
 import "../Pages/services.css"; 
 import Footer from "../Components/Footer";
+import { motion } from "framer-motion";
+
 
 const services = [
-  // {
-  //   icon: <FaBolt />,
-  //   title: "Electrical Panel Board",
-  //   desc: "Design, installation, and maintenance of electrical panel boards ensuring safety and efficiency.",
-  // },
   {
     icon: <FaTachometerAlt />,
     title: "Electrical Meter Connection",
@@ -49,23 +46,27 @@ const services = [
     desc: "Automated Meter Reading (AMR) water solutions for efficient monitoring and billing.",
   },
   {
+    icon: <FaWater />,
+    title: "Water Meter Solutions",
+    desc: "Installation of postpaid meters and the latest Baylan prepaid meters. Leading water meter replacement contractors in Muscat, trusted for quality and precision.",
+  },
+  {
     icon: <FaSync />,
     title: "Electrical Meter Replacement",
     desc: "Upgrade and replace old meters with high-quality, certified electrical meters.",
   },
-
-  // {
-  //   icon: <FaVideo />,
-  //   title: "CCTV Works",
-  //   desc: "Design and installation of modern surveillance systems for safety and monitoring.",
-  // },
   {
     icon: <FaPeopleCarry />,
     title: "Manpower Service",
     desc: "Skilled workforce for technical, maintenance, and construction needs.",
   },
-
+  {
+    icon: <FaBolt />,
+    title: "Import & Export (Future Endeavors)",
+    desc: "Expanding into global import and export of technical equipment and industrial materials, supporting future growth and international partnerships.",
+  },
 ];
+
 
 const Services = () => {
   return (
@@ -78,6 +79,14 @@ const Services = () => {
       <Navbar />
 
       <div className="container mx-auto px-6">
+        <motion.div
+          className="container mt-5 facility-section"
+          id="lab"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 1.2 }}
+        >
         <h2 className="text-center text-4xl font-bold mb-12 text-teal-400">
           Our Expertise & Services
         </h2>
@@ -102,8 +111,30 @@ const Services = () => {
             </div>
           ))}
         </div>
+        </motion.div>
       </div>
     </section>
+    <section className="py-20 bg-gradient-to-r from-[#0F172A] to-[#1E294B] text-white" style={{ fontFamily: '"Exo 2", sans-serif' }}>
+  <div className="container mx-auto px-6 text-center">
+    <h2 className="text-3xl font-bold mb-10 text-teal-400">
+      Certificate of Appreciation
+    </h2>
+
+    <div className="backdrop-blur-xl bg-white/10 border border-teal-500/40 
+                    rounded-2xl shadow-2xl p-8 max-w-2xl mx-auto">
+      
+      <img
+        src="/gallery/Certificate.jpg"
+        alt="Certificate of Appreciation"
+        className="rounded-lg w-full shadow-lg border border-white/20"
+      />
+
+    </div>
+  </div>
+</section>
+
+
+    
     <Footer/>
     </div>
     

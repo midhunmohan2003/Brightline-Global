@@ -5,12 +5,13 @@ import { FaWhatsapp } from "react-icons/fa";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { useForm } from "react-hook-form";
+import { motion } from "framer-motion";
+
 
 const Contact = () => {
   const [open, setOpen] = useState(false);
   const menuRef = useRef(null);
 
-  // Form Validation Hook
   const {
     register,
     handleSubmit,
@@ -18,14 +19,12 @@ const Contact = () => {
     reset,
   } = useForm();
 
-  // Submit Handler
   const onSubmit = (data) => {
     console.log("Form Submitted:", data);
     alert("Message Sent Successfully!");
     reset();
   };
 
-  // Close popup on click outside
   useEffect(() => {
     function handleClick(event) {
       if (open && menuRef.current && !menuRef.current.contains(event.target)) {
@@ -46,9 +45,16 @@ const Contact = () => {
       >
         <Navbar />
 
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6"><motion.div
+        className="container mt-5"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
           {/* Title */}
           <div className="text-center mb-16">
+            
             <h2 className="text-4xl md:text-5xl font-bold text-teal-400 mb-4">
               Get in Touch
             </h2>
@@ -58,11 +64,13 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid gap-10 lg:grid-cols-2">
+          {/* GRID (Reduced width + centered) */}
+          <div className="grid gap-10 lg:grid-cols-2 max-w-4xl mx-auto">
+
             {/* Contact Form */}
             <form
               onSubmit={handleSubmit(onSubmit)}
-              className="bg-[#0B132B]/70 p-8 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-[0_0_25px_rgba(45,212,191,0.5)]"
+              className="bg-[#0B132B]/70 p-6 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-[0_0_25px_rgba(45,212,191,0.5)]"
             >
               {/* NAME */}
               <div className="mb-6">
@@ -137,18 +145,23 @@ const Contact = () => {
 
             {/* Contact Info */}
             <div className="flex flex-col gap-6">
+
               {/* PHONE */}
               <div
-             
-                className="relative flex items-center gap-4 bg-[#0B132B]/70 p-6 rounded-2xl hover:shadow-[0_0_25px_rgba(45,212,191,0.5)] transition-all duration-300"
+                className="relative flex items-center gap-4 bg-[#0B132B]/70 p-5 rounded-2xl hover:shadow-[0_0_25px_rgba(45,212,191,0.5)] transition-all duration-300"
               >
                 <FaPhone className="text-teal-400 text-3xl" />
                 <div>
                   <h5 className="text-xl font-semibold">Phone</h5>
-                  <p  className="text-gray-300 hover:text-white hover:cursor-pointer" onClick={(e) => {
-                  e.stopPropagation();
-                  setOpen(!open);
-                }} >+96878026775</p>
+                  <p
+                    className="text-gray-300 hover:text-white hover:cursor-pointer"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setOpen(!open);
+                    }}
+                  >
+                    +96878026775
+                  </p>
 
                   {open && (
                     <div
@@ -181,7 +194,7 @@ const Contact = () => {
               </div>
 
               {/* EMAIL */}
-              <div className="flex items-center gap-4 bg-[#0B132B]/70 p-6 rounded-2xl hover:shadow-[0_0_25px_rgba(45,212,191,0.5)] transition-all duration-300">
+              <div className="flex items-center gap-4 bg-[#0B132B]/70 p-5 rounded-2xl hover:shadow-[0_0_25px_rgba(45,212,191,0.5)] transition-all duration-300">
                 <FaEnvelope className="text-teal-400 text-3xl" />
                 <div>
                   <h5 className="text-xl font-semibold">Email</h5>
@@ -195,15 +208,18 @@ const Contact = () => {
               </div>
 
               {/* ADDRESS */}
-              <div className="flex items-center gap-4 bg-[#0B132B]/70 p-6 rounded-2xl hover:shadow-[0_0_25px_rgba(45,212,191,0.5)] transition-all duration-300">
+              <div className="flex items-center gap-4 bg-[#0B132B]/70 p-5 rounded-2xl hover:shadow-[0_0_25px_rgba(45,212,191,0.5)] transition-all duration-300">
                 <FaMapMarkerAlt className="text-teal-400 text-3xl" />
                 <div>
                   <h5 className="text-xl font-semibold">Address</h5>
-                  <p className="text-gray-300">GGC2+PRH, Al Amarat, Muscat Oman</p>
+                  <p className="text-gray-300">
+                    GGC2+PRH, Al Amarat, Muscat Oman
+                  </p>
                 </div>
               </div>
+
             </div>
-          </div>
+          </div></motion.div>
         </div>
       </section>
 

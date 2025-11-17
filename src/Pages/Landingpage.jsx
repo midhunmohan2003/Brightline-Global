@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { FaFacebookF, FaLinkedin, FaInstagram } from "react-icons/fa";
 import Navbar from '../Components/Navbar';
 import { Link } from 'react-router-dom';
 import Footer from '../Components/Footer';
+import { motion, useAnimation } from "framer-motion";
+
 
 function Landingpage() {
+
+    const controls = useAnimation();
+
+  useEffect(() => {
+    controls.start({ opacity: 1, x: 0 });
+  }, [controls]);
+
   return (
     <div>
       <section
@@ -14,11 +23,19 @@ function Landingpage() {
   <Navbar />
 
   <div className="container mx-auto flex flex-col lg:flex-row items-center px-6 py-20 font-exo">
+     
     {/* Left Content */}
-    <div className="lg:w-1/2 flex flex-col items-start mt-18 text-left mb-25">
+    <div className="lg:w-1/2 flex flex-col items-start mt-18 text-left ">
+    <motion.div
+  initial={{ opacity: 0, x: -150 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 1.2, ease: "easeOut" }}
+  className="lg:w-1/2 flex flex-col items-start mt-18 text-left mb-25"
+>
       <h1 className="font-bold leading-tight font-exo text-4xl sm:text-5xl md:text-6xl lg:text-[75px]">
         BOUSHER, <br /> SULTANATE OF OMAN
       </h1>
+      
 
       <p className="text-gray-300 text-base sm:text-lg md:text-xl mt-4">
         Electrical Contract Company
@@ -46,10 +63,17 @@ function Landingpage() {
           Services →
         </button></Link>
       </div>
+      </motion.div>
     </div>
 
     {/* Right Content */}
     <div className="lg:w-1/2 mt-12 lg:mt-0 flex justify-center relative">
+     <motion.div
+          className="container facility-section"
+          initial={{ opacity: 0, x: 50 }}
+          animate={controls}
+          transition={{ duration: 1 }}
+        >
       <div
         className="relative w-[250px] sm:w-[320px] md:w-[380px] lg:w-[420px] h-[250px] sm:h-[320px] md:h-[380px] lg:h-[420px] overflow-hidden shadow-2xl border-2 border-teal-400/40"
         style={{
@@ -66,12 +90,19 @@ function Landingpage() {
       </div>
 
       {/* Glowing aura */}
-      <div className="absolute w-[320px] sm:w-[400px] md:w-[460px] h-[320px] sm:h-[400px] md:h-[460px] rounded-full bg-teal-400/20 blur-3xl -z-10"></div>
+      <div className="absolute w-[320px] sm:w-[400px] md:w-[460px] h-[320px] sm:h-[400px] md:h-[460px] rounded-full bg-teal-400/20 blur-3xl -z-10"></div></motion.div>
     </div>
   </div>
   {/* What We Offer Section */}
 <section className="w-full bg-gradient-to-br from-[#0F172A] via-[#182444] to-[#1E294B] text-white py-24 px-6">
   <div className="container mx-auto max-w-6xl text-center">
+     <motion.div
+            className="container mt-5"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
 
     {/* Main Heading */}
     <h2 className="text-4xl md:text-5xl font-bold text-teal-400 mb-4">
@@ -139,11 +170,14 @@ function Landingpage() {
         </div>
       ))}
     </div>
-
+      </motion.div>
   </div>
+  
 </section>
 
+
 </section>
+
 <Footer/>
 
 

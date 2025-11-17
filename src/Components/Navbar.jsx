@@ -34,8 +34,14 @@ function Navbar() {
               alt="Logo"
               className="w-14 sm:w-16 h-auto object-contain"
             />
-            <span className="text-xl sm:text-2xl font-bold text-white whitespace-nowrap">
-              Brightline<span className="text-[#00F5A0]">Global</span>
+            <span className="whitespace-nowrap select-none text-2xl sm:text-3xl font-bold">
+              <span className="text-white drop-shadow-[0_0_6px_rgba(255,255,255,0.5)]">
+                Brightline
+              </span>
+              <span className="text-[#00F5A0] drop-shadow-[0_0_6px_rgba(0,245,160,0.5)] ml-1">
+                Global
+              </span>
+              <span className="text-gray-300 text-sm ml-1">LLC</span>
             </span>
           </div>
         </Link>
@@ -57,16 +63,16 @@ function Navbar() {
               Services
             </li>{" "}
           </Link>
-           <Link to="/gallery">
+          <Link to="/gallery">
             <li className="hover:text-[#00F5A0] cursor-pointer transition">
               Gallery
             </li>
           </Link>
           <Link to="/contact">
-          <li className="hover:text-[#00F5A0] cursor-pointer transition">
-            Contact
-          </li>
-           </Link>
+            <li className="hover:text-[#00F5A0] cursor-pointer transition">
+              Contact
+            </li>
+          </Link>
         </ul>
 
         {/* Mobile Menu Button */}
@@ -81,23 +87,32 @@ function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <ul className="md:hidden bg-[#0B132B]/95 backdrop-blur-md text-white flex flex-col items-center space-y-5 py-6 font-medium transition-all duration-300">
-          <Link to="/"><li className="hover:text-[#00F5A0] cursor-pointer transition">
-            Home
-          </li></Link>
-          <Link to="/about"><li className="hover:text-[#00F5A0] cursor-pointer transition">
-            About
-          </li></Link>
-         <Link to="/services"> <li className="hover:text-[#00F5A0] cursor-pointer transition">
-            Services
-          </li></Link>
+          <Link to="/">
+            <li className="hover:text-[#00F5A0] cursor-pointer transition">
+              Home
+            </li>
+          </Link>
+          <Link to="/about">
+            <li className="hover:text-[#00F5A0] cursor-pointer transition">
+              About
+            </li>
+          </Link>
+          <Link to="/services">
+            {" "}
+            <li className="hover:text-[#00F5A0] cursor-pointer transition">
+              Services
+            </li>
+          </Link>
           <Link to="/gallery">
             <li className="hover:text-[#00F5A0] cursor-pointer transition">
               Gallery
             </li>
           </Link>
-          <Link to="/contact"><li className="hover:text-[#00F5A0] cursor-pointer transition">
-            Contact
-          </li></Link>
+          <Link to="/contact">
+            <li className="hover:text-[#00F5A0] cursor-pointer transition">
+              Contact
+            </li>
+          </Link>
         </ul>
       )}
     </nav>

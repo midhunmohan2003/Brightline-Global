@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import { motion } from "framer-motion";
+
 
 function Gallery() {
   const images = [
@@ -23,6 +25,13 @@ function Gallery() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-teal-400/10 rounded-full blur-3xl -z-10"></div>
 
         <div className="container mx-auto max-w-7xl px-6 mt-20">
+           <motion.div
+        className="container mt-5"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
           <h2 className="text-4xl md:text-5xl font-bold text-teal-400 mb-6 text-center">
             Gallery
           </h2>
@@ -56,6 +65,7 @@ function Gallery() {
               </div>
             ))}
           </div>
+          </motion.div>
         </div>
       </section>
 
