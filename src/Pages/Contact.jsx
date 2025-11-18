@@ -69,6 +69,7 @@ const Contact = () => {
 
             {/* Contact Form */}
             <form
+              noValidate
               onSubmit={handleSubmit(onSubmit)}
               className="bg-[#0B132B]/70 p-6 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-[0_0_25px_rgba(45,212,191,0.5)]"
             >
@@ -95,18 +96,22 @@ const Contact = () => {
                 <label className="block mb-2 text-gray-300 font-semibold">
                   Email
                 </label>
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  {...register("email", {
-                    required: "Email is required",
-                    pattern: {
-                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                      message: "Enter a valid email",
-                    },
-                  })}
-                  className="w-full p-3 rounded-lg bg-[#1E294B]/50 border border-teal-400 focus:border-teal-500 outline-none transition"
-                />
+               <input
+  type="email"
+  placeholder="Your Email"
+  {...register("email", {
+    required: "Email is required",
+    pattern: {
+      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+      message: "Enter a valid email",
+    },
+  })}
+  onInput={(e) => {
+    e.target.value = e.target.value.toLowerCase(); // Force lowercase
+  }}
+  className="w-full p-3 rounded-lg bg-[#1E294B]/50 border border-teal-400 focus:border-teal-500 outline-none transition"
+/>
+
                 {errors.email && (
                   <p className="text-red-400 text-sm mt-1">
                     {errors.email.message}
