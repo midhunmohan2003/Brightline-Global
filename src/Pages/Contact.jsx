@@ -6,6 +6,8 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 const Contact = () => {
@@ -21,7 +23,7 @@ const Contact = () => {
 
   const onSubmit = (data) => {
     console.log("Form Submitted:", data);
-    alert("Message Sent Successfully!");
+    toast.success("Message Sent Successfully!");
     reset();
   };
 
@@ -79,7 +81,7 @@ const Contact = () => {
                   Name
                 </label>
                 <input
-                  type="text"
+                  type="name"
                   placeholder="Your Name"
                   {...register("name", { required: "Name is required" })}
                   className="w-full p-3 rounded-lg bg-[#1E294B]/50 border border-teal-400 focus:border-teal-500 outline-none transition"
@@ -229,6 +231,8 @@ const Contact = () => {
       </section>
 
       <Footer />
+            <ToastContainer autoClose={2000} position="top-center" theme="colored" />
+
     </div>
   );
 };
