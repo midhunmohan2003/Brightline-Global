@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import logo from "../assets/logo.png";
+import logo from "../assets/blgLogo.png";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -49,7 +49,7 @@ function Navbar() {
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 lg:space-x-8 font-medium text-white">
           <Link to="/">
-            <li className="hover:text-[#00F5A0] cursor-pointer transition">
+            <li className="hover:text-[#00F5A0]  cursor-pointer transition">
               Home
             </li>
           </Link>

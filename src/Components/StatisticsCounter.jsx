@@ -21,9 +21,7 @@ function StatisticsCounter() {
       label: "Prepaid Meters Installed",
     },
     {
-      icon: (
-        <FaTachometerAlt className="text-4xl text-teal-300 mx-auto mb-3" />
-      ),
+      icon: <FaTachometerAlt className="text-4xl text-teal-300 mx-auto mb-3" />,
       end: 28000,
       label: "AMR Meters Replaced",
     },
@@ -40,8 +38,10 @@ function StatisticsCounter() {
   ];
 
   return (
-    <div ref={ref} className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto text-center">
-
+    <div
+      ref={ref}
+      className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto text-center"
+    >
       {stats.map((item, index) => (
         <div
           key={index}
@@ -60,7 +60,6 @@ function StatisticsCounter() {
           </p>
         </div>
       ))}
-
     </div>
   );
 }

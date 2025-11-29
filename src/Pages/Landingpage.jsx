@@ -33,18 +33,18 @@ function Landingpage() {
   return (
     <div>
       {/* Hero Section with Background Image */}
-<section
-  className="relative w-full h-screen bg-cover bg-center bg-no-repeat text-white"
-  style={{
-    backgroundImage: `url(${heroImg})`,
-    fontFamily: '"Exo 2", sans-serif',
-  }}
->
-  {/* Blue Shade Overlay - matching the image */}
-  <div className="absolute inset-0 bg-blue-950/20"></div>
-  
-  {/* Optional: Additional gradient for more depth */}
-  <div className="absolute inset-0 bg-gradient-to-r from-blue-950/75 to-blue-800/50"></div>
+      <section
+        className="relative w-full h-screen bg-cover bg-center bg-no-repeat text-white"
+        style={{
+          backgroundImage: `url(${heroImg})`,
+          fontFamily: '"Exo 2", sans-serif',
+        }}
+      >
+        {/* Blue Shade Overlay - matching the image */}
+        <div className="absolute inset-0 bg-blue-950/20"></div>
+
+        {/* Optional: Additional gradient for more depth */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-950/75 to-blue-800/50"></div>
 
         {/* Content */}
         <div className="relative z-10 container mx-auto flex flex-col items-center justify-center px-6 h-full">
