@@ -110,24 +110,40 @@ function About() {
                       icon: "🏢",
                     },
                     {
-                      role: "Managing Partner & General Manager",
-                      name: "Nabeel Vahab Udheen",
+                      role: "CEO",
+                      name: "Nabeel Vahabudheen",
                       icon: "👔",
                     },
                     {
-                      role: "Electrical Engineer & Data Analyst",
-                      name: "Al Haj Akthar Ismail",
-                      icon: "⚡",
+                      role: "Operation Head",
+                      name: "Alhaj Akthar",
+                      icon: "⚙️",
                     },
+                    // {
+                    //   role: "Electrical Engineer & Data Analyst",
+                    //   name: "Al Haj Akthar Ismail",
+                    //   icon: "⚡",
+                    // },
                     {
                       role: "Project Coordinator",
                       name: "Inthihad Hilal Ali Al Hosni",
                       icon: "📌",
                     },
+                    // {
+                    //   role: "Safety Officer",
+                    //   name: "Al Ganim Akthar Ismail",
+                    //   icon: "🛡️",
+                    // },
                     {
-                      role: "Safety Officer",
-                      name: "Al Ganim Akthar Ismail",
-                      icon: "🛡️",
+                      role: "Sales Head",
+                      name: "Amar Valiyakath Mahin",
+                      icon: "📈",
+                    },
+                    
+                    {
+                      role: "Marketing cum IT Support",
+                      name: "Vivek Vijayakumar Girija",
+                      icon: "💻",
                     },
                   ].map((person, index) => (
                     <div
